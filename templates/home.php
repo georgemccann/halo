@@ -99,11 +99,11 @@ get_header(); ?>
               $count++; ?>
                 <div class="accordion-item">
                   <h2 class="accordion-header" id="heading<?php echo $count; ?>">
-                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse<?php echo $count; ?>" aria-expanded="true" aria-controls="collapse<?php echo $count; ?>">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse<?php echo $count; ?>" aria-expanded="true" aria-controls="collapse<?php echo $count; ?>">
                       <?php the_sub_field('service_title'); ?>
                     </button>
-                  </h2>
-                  <div id="collapse<?php echo $count; ?>" class="accordion-collapse collapsed" aria-labelledby="heading<?php echo $count; ?>" data-bs-parent="#accordionExample">
+                  </h2> 
+                  <div id="collapse<?php echo $count; ?>" class="accordion-collapse collapsed collapse" aria-labelledby="heading<?php echo $count; ?>" data-bs-parent="#accordionExample">
                     <div class="accordion-body pt-0">
                       <?php the_sub_field('service_content'); ?>
                       
