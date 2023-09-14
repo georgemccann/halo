@@ -13,10 +13,8 @@ get_header(); ?>
   <div class="container py-5">
     <div class="row justify-content-between gx-0"> 
       <div class="col-12 col-lg-5">
-        <h1 class="fw-light pb-4">Let's Talk</h1>
-        <p>The easiest method to get the ball rolling is to schedule a call with us through our calendar.</p>
-        <p>During our conversation, we'll delve into the challenges that need to be addressed. so that we can obtain a comprehensive understanding of the issues you aim to resolve.</p>
-        <p>If you're not quite ready yet, simply complete the form below, and we'll get straight back to you.</p>
+        <h1 class="fw-light pb-4"><?php the_field('contact_title') ;?></h1>
+        <?php the_field('contact_content'); ?>
       </div> 
 
       <div class="col-12 col-lg-5">
