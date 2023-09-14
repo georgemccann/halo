@@ -52,7 +52,12 @@ get_header(); ?>
   </div>
 </section>
 
-<?php get_template_part( 'template-parts/content', 'quote-block' ); ?>
+<?php 
+$quote = get_field('quote');
+$quote_author = get_field('quote_author');
+$background_image = get_field('quote_background_image');
+include(locate_template('template-parts/content-quote-block.php')); 
+?>
  
 
 <section id="presentation-types" class="py-5">
