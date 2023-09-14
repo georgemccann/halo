@@ -21,7 +21,7 @@
   </div>
 </section>
 <div class="modal fade" id="showreelModal" tabindex="-1" role="dialog" aria-labelledby="showreelModal" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
         <div class="modal-content" style="background: transparent;">
         <div class="modal-header">
             <h5 class="modal-title"></h5>
