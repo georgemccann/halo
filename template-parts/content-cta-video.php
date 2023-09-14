@@ -1,10 +1,10 @@
 <section id="mid-section" class="mid-section quote video p-relative">
-  <img src="/wp-content/uploads/2023/09/home-mid.png" class="w-100"/>
+  <img src="<?php echo $background_image; ?>" class="w-100"/>
   <div class="quote-content">
     <div class="container">
       <div class="row align-items-center justify-content-between">
         <div class="col-12 col-lg-6 text-start">
-          <h2>Where imagination meets innovation, and the possibilities are limitless. </h2>
+          <h2><?php echo $video_block_title; ?> </h2>
         </div>
 
         <div class="col-12 col-lg-3">
