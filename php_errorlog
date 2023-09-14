@@ -1,0 +1,8 @@
+[01-Nov-2019 09:50:22 CST6CDT] PHP Fatal error:  Uncaught Error: Call to undefined function get_header() in /home/customer/www/campwell.co.uk/public_html/wp-content/themes/halo/index.php:17
+Stack trace:
+#0 {main}
+  thrown in /home/customer/www/campwell.co.uk/public_html/wp-content/themes/halo/index.php on line 17
+[21-Feb-2021 19:46:19 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function get_header() in /home/customer/www/halo.everlong.digital/public_html/wp-content/themes/halo/index.php:18
+Stack trace:
+#0 {main}
+  thrown in /home/customer/www/halo.everlong.digital/public_html/wp-content/themes/halo/index.php on line 18
