@@ -509,6 +509,26 @@ h3 {
   line-height: 3rem;
 }
 
+.work-toggler img {
+  border: 4px solid white;
+}
+
+.work-toggler .after {
+  display: none;
+}
+
+.work-toggle {
+  color: white;
+  font-weight: 500;
+  padding-bottom: 5px;
+  margin: 20px 20px;
+  text-transform: uppercase;
+}
+
+.work-toggle.active {
+  border-bottom: 2px solid #E94870;
+}
+
 
 /* SERVICES */
 .service-boxes .service {
