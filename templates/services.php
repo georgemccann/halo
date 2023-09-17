@@ -28,7 +28,7 @@ get_header(); ?>
           <?php  
           if( have_rows('services') ):
             while( have_rows('services') ) : the_row(); ?>
-              <div class="col-12 col-lg-6 mb-4">
+              <div class="col-12 col-md-6 mb-4">
                 <a href="<?php the_sub_field('service_link'); ?>" class="service">
                   <div class="service-title text-center">
                     <img src="<?php the_sub_field('service_image'); ?>" alt="<?php the_sub_field('service_title'); ?>"/>
@@ -99,6 +99,7 @@ $(document).ready(function(){
   
   $('.presentation-types-slider').slick({
     dots: true, 
+    arrows: false,
     slidesToShow: 1,
     adaptiveHeight: true
   });

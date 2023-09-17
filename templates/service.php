@@ -23,7 +23,7 @@ if( have_rows('intro_block') ):
           <section id="home-intro" class="py-5">
             <div class="container py-5">
               <div class="row justify-content-center align-items-center">
-                <div class="col-12 col-lg-4 text-start">
+                <div class="col-12 col-lg-4 text-start mb-5 mb-lg-0">
                   <h2><?php the_sub_field('content_and_slider_title'); ?></h2>
                   <?php the_sub_field('content_and_slider_content'); ?>
                   <div class="mt-5">
@@ -49,19 +49,24 @@ if( have_rows('intro_block') ):
           </section>
 
           <script>
-          $(document).ready(function(){ 
-            
-            
-            $('.service-image-slider').slick({
-              dots: true, 
-              arrows:false,
-              slidesToShow: 1,
-              adaptiveHeight: true
+            $(document).ready(function(){  
+              let $slider = $('.service-image-slider')
+              .on('init', function(slick) {
+                  console.log('fired!');
+                  $('.service-image-slider').fadeIn(3000);
+              })
+              .slick({
+                  fade: true,
+                  dots: true,
+                  arrows:false,
+                  focusOnSelect: true,
+                  lazyLoad: 'ondemand',
+                  speed: 1000
+              });
             });
 
-          });
+            </script> 
 
-          </script>
 
           <?php
           // Do something...
@@ -72,7 +77,7 @@ if( have_rows('intro_block') ):
         <section id="home-intro" class="py-5">
           <div class="container py-5">
             <div class="row justify-content-between align-items-center">
-              <div class="col-12 col-lg-5 text-start">
+              <div class="col-12 col-lg-5 text-start mb-5 mb-lg-0">
                 <?php if (get_sub_field('content_and_image_title') != '') { ?>
                   <h2><?php the_sub_field('content_and_image_title'); ?></h2>
                 <?php
@@ -217,7 +222,7 @@ if( have_rows('5050_block') ):
                     if( have_rows('5050_slider') ):
                       while( have_rows('5050_slider') ) : the_row(); ?>
                         <div>
-                          <div class="bg-light p-5 text-center no-margin-last-paragraph">
+                          <div class="bg-light p-3 p-md-5 text-center no-margin-last-paragraph">
                             <h3><?php the_sub_field('box_title'); ?></h3>
                             <?php the_sub_field('box_content'); ?>
                           </div>

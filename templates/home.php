@@ -38,7 +38,7 @@ get_header(); ?>
   <img src="<?php the_field('letterbox_graphic_image'); ?>" class="w-100"/>
 </section>
 
-<section id="home-difference" class="py-5">
+<section id="home-difference" class="pb-0 pb-lg-5 pt-lg-5">
   <div class="container py-5">
     <div class="row justify-content-center align-items-center">
       <div class="col-12 text-center">
@@ -46,11 +46,11 @@ get_header(); ?>
       </div>
     </div>
 
-    <div class="row gx-5 mt-5"> 
+    <div class="row gx-md-5 mt-3 mt-lg-5"> 
       <?php  
       if( have_rows('icon_cards') ):
         while( have_rows('icon_cards') ) : the_row(); ?>
-          <div class="col-12 col-lg-4">
+          <div class="col-12 col-lg-4 mb-4 mb-lg-0">
             <div class="icon-card">
               <div class="icon">
                 <img src="<?php the_sub_field('icon'); ?>" />

@@ -1,5 +1,5 @@
 <section id="our-work" class="py-5">
-  <div class="container py-5">
+  <div class="container py-3 py-lg-5">
     <div class="row justify-content-center align-items-center">
       <div class="col-12 ">
         <h2>Snapshot of our latest work</h2>   
@@ -22,7 +22,7 @@
           $featured_img = wp_get_attachment_url( get_post_thumbnail_id(get_the_ID()), 'full' );
           if ( $featured_img ) { ?>
             <div>
-              <a data-toggle="modal" data-bs-toggle="modal" data-bs-target="#work-modal-<?php echo $count; ?>" href="#"><img style="max-height: 240px;"  src="<?php echo $featured_img; ?>" /></a>
+              <a data-toggle="modal" data-bs-toggle="modal" data-bs-target="#work-modal-<?php echo $count; ?>" href="#"><img class="w-100" style="max-height: 240px;"  src="<?php echo $featured_img; ?>" /></a>
             </div>
           <?php 
           } 
@@ -53,7 +53,7 @@
                       <img src="<?php echo get_template_directory_uri(); ?>/img/modalClose.png" />
                     </button>
                   </div>
-                  <div class="work-toggler modal-body p-0">#
+                  <div class="work-toggler modal-body p-0">
                     <?php 
                     if( have_rows('before_images') ): ?>
                       <div class="before row justify-content-center align-items-center">
@@ -130,23 +130,30 @@
 </section>
 
 <script>
-$(document).ready(function(){ 
-  
-  
-  $('.our-work-slides').slick({
+
+
+ 
+$(document).ready(function(){  
+  let $work = $('.our-work-slides')
+  .on('init', function(slick) { 
+      $('.our-work-slides').fadeIn(5000);
+  })
+  .slick({
     centerMode: true,
     dots: true,
+    autoplay: true,
+    autoplaySpeed: 3000,
     centerPadding: '100px',
     slidesToShow: 3,
     adaptiveHeight: true,
     responsive: [
       {
-        breakpoint: 768,
+        breakpoint: 992,
         settings: {
           arrows: false,
           centerMode: true,
-          centerPadding: '40px',
-          slidesToShow: 3
+          centerPadding: '100px',
+          slidesToShow: 2
         }
       },
       {
@@ -160,7 +167,6 @@ $(document).ready(function(){
       }
     ]
   });
-
-});
+}); 
 
 </script>

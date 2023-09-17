@@ -317,18 +317,12 @@ h3 {
   line-height: 40px;
 }
 
-.navbar-dark .navbar-nav .current-page-ancestor .nav-link, .navbar-dark .navbar-nav .active .nav-link, .navbar-dark .navbar-nav .show>.nav-link {
-  color: #E94870; 
-}
+ 
 
 .menu-item .dropdown-toggle::after {
   display: none;
 }
-
-.navbar-expand-lg .navbar-nav .dropdown-menu {
-  background-color: #000000bf !important;
-}
-
+ 
 .dropdown-item {
   color: white !important;
   font-weight: 100;
@@ -569,6 +563,7 @@ h3 {
 
 .presentation-types-slider {
   background: #1E2225;
+  overflow:hidden;
 }
 
 .presentation-types-slider img { 
@@ -1684,10 +1679,8 @@ footer img {
     border:  0px;
   }
   .navbar-dark .navbar-nav .nav-link, .navbar-dark .navbar-nav .show > .nav-link {
-    font-size: 30px;
     padding: 15px;
-    text-align: center;
-    color: #FAAD64;
+    text-align: center; 
     font-weight: 600;
     border-bottom: 1px solid white;
     text-transform: unset;
@@ -1853,14 +1846,36 @@ footer img {
 }
 
 @media (max-width: 767px) {
-  #serviceHeader {
-    padding: 0;
+  .featureArea {
+    padding-top: 10rem;
+    padding-bottom: 8rem;
   }
-  #powerArea, #introArea {
-    padding-top:0px;
-  } 
-  #fiveSteps { 
-    padding: 4em 0em;
+  .featureArea h1 {
+    line-height: 3rem;
+    font-size: 3rem;
+  }
+  .featureArea .intro p {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+  .mission-statement {
+    font-size: 2rem;
+    line-height: 2.5rem;
+  }
+  .half-block {
+    padding: 2.5rem;
+  }
+  .accordion-button {
+    padding: 15px 0px!important;
+  }
+  .mid-section.video h2 {
+    font-size: 2rem;
+  }
+  .custom-slick-tabs a {
+    width: 100%;
+    display: block;
+    margin-bottom: 15px;
+    text-align: center;
   }
 }
 
@@ -1948,11 +1963,7 @@ footer img {
   h1 {
     font-weight: 600;
   }
-
-  #serviceHeader h1, h2 {
-    font-size: 70px;
-    font-weight: 600;
-  }
+ 
 
   h2 span {
     display: inline;
@@ -2085,14 +2096,7 @@ footer .footerHello a {
   .greyOpacityBackground h3 {
     font-size: 30px;
   }
-
-  #serviceHeader h1, h2 {
-    font-size: 32px;
-  }
-
-  body {
-    font-size: 18px;
-  }
+ 
 }
 
 @media (max-width: 767px) {

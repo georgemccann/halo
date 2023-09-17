@@ -34,7 +34,7 @@
 
     <div class="container">
       <div class="row justify-content-center align-items-center">
-        <div class="col-10">
+        <div class="col-12 col-md-10">
           <div class="smallText mb-3">
             Registered in England and Wales. Company registration number: 11825431.</br>Registered Office: 37 Great Pulteney Street, Bath, BA2 4DA, UK</br>
                 © 2022 HALO Present is a part of Emberson Group.
@@ -44,7 +44,7 @@
           </div>
         </div>
 
-        <div class="col-2 text-end">
+        <div class="col-12 col-md-2 mt-5 mt-md-0 text-start text-md-end">
           <img src="<?php echo get_template_directory_uri(); ?>/img/logo.png" />
         </div>
       
