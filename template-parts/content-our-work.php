@@ -1,4 +1,4 @@
-<section id="our-work" class="py-5">
+<section id="our-work" class="my-5 py-5">
   <div class="container py-3 py-lg-5">
     <div class="row justify-content-center align-items-center">
       <div class="col-12 ">
@@ -22,7 +22,7 @@
           $featured_img = wp_get_attachment_url( get_post_thumbnail_id(get_the_ID()), 'full' );
           if ( $featured_img ) { ?>
             <div>
-              <a data-toggle="modal" data-bs-toggle="modal" data-bs-target="#work-modal-<?php echo $count; ?>" href="#"><img class="w-100" style="max-height: 240px;"  src="<?php echo $featured_img; ?>" /></a>
+              <a data-toggle="modal" data-bs-toggle="modal" data-bs-target="#work-modal-<?php echo $count; ?>" href="#"><img style="max-width:100%;"  src="<?php echo $featured_img; ?>" /></a>
             </div>
           <?php 
           } 

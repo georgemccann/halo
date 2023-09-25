@@ -3,7 +3,13 @@
 <?php wp_footer(); ?>
 
  
-
+<script>
+  $(document).ready(function(){
+    $('body').on('hidden.bs.modal', '.modal', function () {
+      $('video').trigger('pause');
+    });
+  });
+</script>
 <footer id="footer" class="section text-light <?php if (is_page_template('templates/contact.php')) { ?> p-0 <?php } ?>" <?php if (!is_page_template('templates/contact.php')) { ?>  style="background: url('<?php echo get_template_directory_uri(); ?>/img/footer.png')" <?php }?>>
   
 <?php if (!is_page_template('templates/contact.php')) { ?>

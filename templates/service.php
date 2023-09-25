@@ -35,9 +35,15 @@ if( have_rows('intro_block') ):
                 <div class="col-12 col-lg-8"> 
                   <div class="service-image-slider h-100">
                   <?php  
+                  $count = 0;
                   if( have_rows('content_and_slider_slides') ):
-                    while( have_rows('content_and_slider_slides') ) : the_row(); ?>
-                      <div><img class="w-100 h-100" src="<?php the_sub_field('image'); ?>" /></div>
+                    while( have_rows('content_and_slider_slides') ) : the_row();
+                      if (get_sub_field('video') != '') {
+                        $count++; ?>
+                        <div><a href="#"  data-bs-toggle="modal" data-bs-target="#showreelModal<?php echo $count; ?>"><img class="w-100 h-100" src="<?php the_sub_field('image'); ?>" /></a></div>
+                      <?php } else { ?>
+                        <div><img class="w-100 h-100" src="<?php the_sub_field('image'); ?>" /></div>
+                      <?php } ?> 
                     <?php 
                     endwhile;
                   endif; ?> 
@@ -47,6 +53,35 @@ if( have_rows('intro_block') ):
               </div>
             </div>
           </section>
+
+          <?php
+          $count = 0;
+          if( have_rows('content_and_slider_slides') ):
+            while( have_rows('content_and_slider_slides') ) : the_row();
+              if (get_sub_field('video') != '') {
+                $count++; ?>
+                <div class="modal fade" id="showreelModal<?php echo $count; ?>" tabindex="-1" role="dialog" aria-labelledby="showreelModal<?php echo $count; ?>" aria-hidden="true">
+                  <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+                      <div class="modal-content" style="background: transparent;">
+                      <div class="modal-header">
+                          <h5 class="modal-title"></h5>
+                          <button type="button" class="close" data-bs-toggle="modal" data-bs-target="#showreelModal<?php echo $count; ?>">
+                          <img src="<?php echo get_template_directory_uri(); ?>/img/modalClose.png" />
+                          </button>
+                      </div>
+                      <div class="modal-body p-0">
+                        <?php the_sub_field('video'); ?>
+                      </div> 
+                    </div>
+                  </div>
+                </div>
+               
+              <?php } ?>
+            <?php 
+            endwhile;
+          endif; ?> 
+          
+ 
 
           <script>
             $(document).ready(function(){  
@@ -153,10 +188,16 @@ endif;
     <div class="row justify-content-center align-items-center">
       <div class="col-12 col-lg-8 text-center">
         <div class="example-slides pb-5">
-            <?php  
+            <?php 
+            $count=0; 
             if( have_rows('image_slider') ):
-              while( have_rows('image_slider') ) : the_row(); ?>
+              while( have_rows('image_slider') ) : the_row(); 
+              if (get_sub_field('video') != '') {
+                $count++; ?>
+                <div><a href="#"  data-bs-toggle="modal" data-bs-target="#showreelSliderModal<?php echo $count; ?>"><img class="w-100" src="<?php the_sub_field('image'); ?>" /></a></div>
+              <?php } else { ?>
                 <div><img class="w-100" src="<?php the_sub_field('image'); ?>"/></div> 
+              <?php } ?> 
               <?php 
               endwhile;
             endif; ?>
@@ -165,6 +206,33 @@ endif;
     </div>
   </div>
 </section>
+
+<?php
+$count = 0;
+if( have_rows('image_slider') ):
+  while( have_rows('image_slider') ) : the_row();
+    if (get_sub_field('video') != '') {
+      $count++; ?>
+      <div class="modal fade" id="showreelSliderModal<?php echo $count; ?>" tabindex="-1" role="dialog" aria-labelledby="showreelSliderModal<?php echo $count; ?>" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+            <div class="modal-content" style="background: transparent;">
+            <div class="modal-header">
+                <h5 class="modal-title"></h5>
+                <button type="button" class="close" data-bs-toggle="modal" data-bs-target="#showreelSliderModal<?php echo $count; ?>">
+                <img src="<?php echo get_template_directory_uri(); ?>/img/modalClose.png" />
+                </button>
+            </div>
+            <div class="modal-body p-0">
+              <?php the_sub_field('video'); ?>
+            </div> 
+          </div>
+        </div>
+      </div>
+      
+    <?php } ?>
+  <?php 
+  endwhile;
+endif; ?> 
  
 <script>
 $(document).ready(function(){  

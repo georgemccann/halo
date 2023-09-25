@@ -9,10 +9,10 @@
             </button>
         </div>
         <div class="modal-body p-0">
-            <video class="w-100" poster="/wp-content/uploads/2022/03/HALO-Showreel-placeholder.jpg" controls="" width="400">
-            <source src="/wp-content/uploads/2022/03/HALO-Showreel-v3.mp4" type="video/mp4"> 
+          <video style="width:100%" poster="/wp-content/uploads/2023/06/WhatsApp-Image-2023-06-19-at-14.22.34.jpeg" controls="" width="400">
+            <source src="https://halopresent.com/wp-content/themes/Halo/img/RWP.mp4"> 
             Your browser does not support HTML5 video.
-            </video>
+          </video>
         </div> 
         </div>
     </div>
@@ -32,7 +32,7 @@
             <div class="showreelButton">
                 <a type="button" data-bs-toggle="modal" data-bs-target="#showreelModal">
                     <img src="<?php echo get_template_directory_uri(); ?>/img/play-btn.png" />
-                    <p class="mb-0">Watch our<br/> showreel</p>
+                    <p class="mb-0">Interactive <br/>Showcase</p>
                 </a>
             </div>
               
