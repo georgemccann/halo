@@ -298,17 +298,22 @@ h3 {
   color:  white;
 }
 
+.text-large h2,
 .text-large {
-  font-size: 18px;
+  font-size: 26px!important;
+}
+
+.text-large .btn.btn-primary {
+  font-size:16px;
 }
 
 .navbar-brand {
   color: #fff;
-  padding: 25px 0px;
+  padding: 20px 0px;
 }
 
 .navbar-brand img {
-  max-width: 120px;
+  max-width: 100px;
 }
 
 .navbar-dark .navbar-nav .nav-link {
@@ -477,12 +482,18 @@ h3 {
 }
 
 .featureArea h1 {
-  line-height: 10rem;
-  font-size: 10rem;
+  line-height: 7rem;
+  font-size: 7rem;
   font-weight: 800;
   margin-bottom: 6rem;
   margin-top: 50%;
 }
+
+@media (max-width: 1880px) {
+  .featureArea h1 { 
+    margin-top: 35%;
+  }
+} 
 
 .featureArea .intro  {
   margin-bottom: 6rem;
@@ -1989,9 +2000,8 @@ footer img {
   .btn.btn-primary {
     font-size: 16px;
   }
-  .text-large {
-  font-size: 18px;
-}
+  
+
  .navbar-dark .navbar-nav .nav-link {
   color: white;
   font-size: 16px;
@@ -2127,6 +2137,9 @@ footer .footerHello a {
 @media screen and (max-width: 768px) {
   #serviceInfoDark .photo {min-height:350px;}
   #serviceInfoDark .mycontent {padding:0 4%;}
+  .featureArea h1 {
+    margin-top: 20%;
+  }
 }
 
 @media screen and (max-width: 480px) {

@@ -1,5 +1,5 @@
 <section id="our-work" class="my-5 py-5">
-  <div class="container py-3 py-lg-5">
+  <div class="container mt-5 py-3 py-lg-5">
     <div class="row justify-content-center align-items-center">
       <div class="col-12 ">
         <h2>Snapshot of our latest work</h2>   
@@ -7,7 +7,7 @@
     </div>
   </div>
  
-  <div class="our-work-slides pb-5">
+  <div class="our-work-slides mb-5 pb-5">
     <?php
         $args = array(  
           'post_type' => 'our_work',
@@ -20,9 +20,24 @@
       while ( $loop->have_posts() ) : $loop->the_post(); 
           $count++;
           $featured_img = wp_get_attachment_url( get_post_thumbnail_id(get_the_ID()), 'full' );
-          if ( $featured_img ) { ?>
+          if ( $featured_img ) { 
+            $slideCount = 0;
+            if( have_rows('before_images') ):
+              while( have_rows('before_images') ) : the_row();
+              $slideCount++;
+              endwhile;
+            endif;?>
             <div>
-              <a data-toggle="modal" data-bs-toggle="modal" data-bs-target="#work-modal-<?php echo $count; ?>" href="#"><img style="max-width:100%;"  src="<?php echo $featured_img; ?>" /></a>
+              <?php if ($slideCount > 0) { ?>
+                <a data-toggle="modal" data-bs-toggle="modal" data-bs-target="#work-modal-<?php echo $count; ?>" href="#"><img style="max-width:100%;"  src="<?php echo $featured_img; ?>" /></a>
+              
+              <?php
+              } else { ?>
+                <img style="max-width:100%;"  src="<?php echo $featured_img; ?>" />
+              
+              <?php
+              } ?>
+              
             </div>
           <?php 
           } 

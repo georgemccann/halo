@@ -9,8 +9,8 @@
             </button>
         </div>
         <div class="modal-body p-0">
-          <video style="width:100%" poster="/wp-content/uploads/2023/06/WhatsApp-Image-2023-06-19-at-14.22.34.jpeg" controls="" width="400">
-            <source src="https://halopresent.com/wp-content/themes/Halo/img/RWP.mp4"> 
+          <video style="width:100%" controls="" width="400">
+            <source src="/wp-content/uploads/2023/09/Jet-Engine-Final.mp4"> 
             Your browser does not support HTML5 video.
           </video>
         </div> 

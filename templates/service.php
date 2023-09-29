@@ -23,7 +23,7 @@ if( have_rows('intro_block') ):
           <section id="home-intro" class="py-5">
             <div class="container py-5">
               <div class="row justify-content-center align-items-center">
-                <div class="col-12 col-lg-4 text-start mb-5 mb-lg-0">
+                <div class="col-12 col-lg-4 text-start mb-5 mb-lg-0 text-large">
                   <h2><?php the_sub_field('content_and_slider_title'); ?></h2>
                   <?php the_sub_field('content_and_slider_content'); ?>
                   <div class="mt-5">
@@ -112,7 +112,7 @@ if( have_rows('intro_block') ):
         <section id="home-intro" class="py-5">
           <div class="container py-5">
             <div class="row justify-content-between align-items-center">
-              <div class="col-12 col-lg-5 text-start mb-5 mb-lg-0">
+              <div class="col-12 col-lg-5 text-start mb-5 mb-lg-0 text-large">
                 <?php if (get_sub_field('content_and_image_title') != '') { ?>
                   <h2><?php the_sub_field('content_and_image_title'); ?></h2>
                 <?php

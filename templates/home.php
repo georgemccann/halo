@@ -20,7 +20,7 @@ get_header(); ?>
   <div class="container py-5">
     <div class="row justify-content-center align-items-center">
       <div class="col-12 col-lg-8 text-center">
-        <div class="no-margin-last-paragraph">
+        <div class="no-margin-last-paragraph text-large">
           <?php the_field('introductory_statement'); ?>
         </div>
         <div class="py-5">

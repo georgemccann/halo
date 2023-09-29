@@ -37,8 +37,7 @@
  
         <?php } else { ?>
           <div class="row justify-content-center">
-            <div class="col-12 col-lg-6">
-              <h2><?php the_field('page_header_subtitle'); ?></h2>
+            <div class="col-12 col-lg-6"> 
               <?php the_field('page_header_content'); ?>
             </div>
           </div>

@@ -29,7 +29,6 @@
         <h4>Follow us</h4>
         <div class="socialIcons">
           <a target="_blank" href="https://www.linkedin.com/company/halopresent/"><i class="fab fa-linkedin-in"></i></a>
-          <a href="#"><i class="fab fa-instagram"></i></a>
         </div>
       </div>
     </div>

@@ -18,7 +18,13 @@ get_header(); ?>
       </div> 
 
       <div class="col-12 col-lg-5">
-        CALENDLY EMBED TO GO HERE
+        <!-- Calendly inline widget begin -->
+
+        <div class="calendly-inline-widget" data-url=https://calendly.com/d/4t7-v38-zzq/let-s-talk-presentations?text_color=ffffff&primary_color=1a1a1a style="min-width:320px;height:700px;"></div>
+
+        <script type="text/javascript" src=https://assets.calendly.com/assets/external/widget.js async></script>
+
+        <!-- Calendly inline widget end -->
       </div>
     </div>
   </div>

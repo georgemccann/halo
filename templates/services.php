@@ -16,13 +16,13 @@ get_header(); ?>
 <section id="home-intro" class="py-5">
   <div class="container py-5">
     <div class="row justify-content-center align-items-center">
-      <div class="col-12 col-lg-4 text-start">
+      <div class="pe-lg-5  col-12 col-lg-4 text-start text-large">
         <h2><?php the_field('our_services_title'); ?></h2>
         <?php the_field('our_services_content'); ?>
       </div>
 
 
-      <div class="col-12 col-lg-8">
+      <div class="ps-lg-5   col-12 col-lg-8">
         <div class="row service-boxes">
 
           <?php  
@@ -33,11 +33,13 @@ get_header(); ?>
                   <div class="service-title text-center">
                     <img src="<?php the_sub_field('service_image'); ?>" alt="<?php the_sub_field('service_title'); ?>"/>
                     <h3><?php the_sub_field('service_title'); ?></h3>
+                    <button  class="btn mt-4 btn-primary">FIND OUT MORE</button>
                   </div>
                   
                   <div class="service-info text-center">
                   <?php the_sub_field('service_content'); ?>
                     <h3><?php the_sub_field('service_title'); ?></h3>
+                    <button  class="btn mt-4 btn-primary">FIND OUT MORE</button>
                   </div>
                 </a>
               </div> 
@@ -116,7 +118,7 @@ $(document).ready(function(){
           <h2 class="mb-5"><?php the_field('content_left_title'); ?></h2>
           <?php the_field('content_left_content'); ?>
           <div class="mt-5">
-            <a href="<?php the_field('content_left_link'); ?>" class="btn btn-primary">FIND OUT MORE</a>
+            <a href="<?php the_field('content_left_link'); ?>" class="btn btn-primary">TALK TO US</a>
           </div>
           
         </div>
